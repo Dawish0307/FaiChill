@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign In Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form id="loginForm" class="login-form">
+
+            <div class="form-heading">Login</div>
+            <div class="input-group">
+                <label class="label">Email</label>
+                <input
+                    required=""
+                    placeholder="Enter your email"
+                    name="email"
+                    id="email"
+                    type="email"
+                />
+            </div>
+            <div class="input-group">
+                <label class="label" for="password">Password</label>
+                <input
+                    required=""
+                    placeholder="Enter your password"
+                    name="password"
+                    id="password"
+                    type="password"
+                />
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button class="submit" type="submit">Log In</button>
+            <div class="signup-link">
+                Don't have an account? <a href="#">Sign Up</a>
+            </div>
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>

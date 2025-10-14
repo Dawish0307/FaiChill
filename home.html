@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Toggle</title>
+    <style>
+        /* CSS cho toàn bộ trang */
+        
+        body {
+            background-color: #0b7bdd; /* Màu nền tổng thể cho trang */
+            font-family: Arial, sans-serif;
+            margin: 0; /* Loại bỏ margin mặc định của body */
+            padding: 0;
+            
+        }
+
+        /* CSS cho thanh điều hướng */
+        .navbar {
+            background-color: #333; /* Màu nền cho thanh navbar */
+            padding: 10px;
+            border-radius: 0; /* Bỏ border-radius để navbar kéo dài toàn bộ chiều rộng */
+        }
+
+        /* CSS cho nút bấm */
+        .navbar button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* CSS cho danh sách menu */
+        #menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; /* Đảm bảo menu dính sát vào navbar */
+        }
+
+        #menu li {
+            background-color: #444;
+            color: white;
+            padding: 12px;
+            border-top: 1px solid #555;
+        }
+
+        #menu li:hover {
+            background-color: #555;
+        }
+        
+        /* Trạng thái ẩn của menu */
+        [hidden] {
+            display: none;
+        }
+        
+    /* 1. Thẻ bao ngoài: Dùng để căn giữa khối theo chiều ngang và dọc */
+.full-page-center {
+    /* Đảm bảo nó chiếm toàn bộ chiều cao màn hình */
+    min-height: 100vh; 
+    
+    /* Kích hoạt Flexbox */
+    display: flex;
+    
+    /* Căn giữa theo chiều ngang */
+    justify-content: center;
+    
+    /* Căn giữa theo chiều dọc */
+    align-items: center;
+    
+    /* Đảm bảo nó chiếm 100% chiều rộng body */
+    width: 100%;
+}
+
+/* 2. CSS cho khối nội dung riêng biệt */
+.center-box {
+    /* Chỉ căn giữa VĂN BẢN bên trong khối này */
+    text-align: center; 
+    
+    max-width: 400px;
+    padding: 30px;
+    border: 1px solid #c51414;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Kiểu cho liên kết Log Out */
+.center-box a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #356adc; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Các quy tắc cơ bản cho body */
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <button onclick="menu.hidden^=1">☰</button>
+        
+        <ul id="menu" hidden>
+            <li>Trang chủ</li>
+            <li>Giới thiệu</li>
+            <li>Liên hệ</li>
+            <li>Blog</li>
+        </ul>
+    </div>
+    <div class="full-page-center">
+        <div class="center-box">
+            <h1>Welcome to Home Page 🎉</h1>
+            <p>You are now logged in successfully!</p>
+            <a href="index.html">Log Out</a>
+        </div>
+    </div>
+    </body>
+</html>
