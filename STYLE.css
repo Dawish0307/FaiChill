@@ -72,7 +72,7 @@ body {
 }
 
 .sidebar .logo {
-    font-size: 24px;
+    font-size: 42px;
     font-weight: 700;
     height: 56px;
     display: flex;
@@ -81,17 +81,19 @@ body {
     z-index: 500;
     padding-bottom: 20px;
     box-sizing: content-box;
+    margin-top: 10px;
+}
+
+.sidebar.close .logo .logo-name {
+    opacity: 2;
+    transform: translateX(-42px) scale(0.4);
+    pointer-events: auto;
+    margin-top: -20px;
 }
 
 .sidebar .logo .logo-name span {
     color: var(--danger);
-}
-
-.sidebar .logo .bx {
-    min-width: 60px;
-    display: flex;
-    justify-content: center;
-    font-size: 2.2rem;
+    margin-left: 20px;
 }
 
 .sidebar .side-menu {
@@ -291,31 +293,48 @@ body {
     position: relative;
 }
 
-.content nav .theme-toggle {
-    display: block;
-    min-width: 50px;
-    height: 25px;
-    background: var(--grey);
-    cursor: pointer;
+/* theme-toggle */
+
+.content nav .theme-toggle label {
     position: relative;
-    border-radius: 25px;
+    left: 50px;
 }
 
-.content nav .theme-toggle::before {
-    content: "";
+.content nav .theme-toggle {
+    margin-right: 15px;
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--dark-grey);
+    transition: color 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle .sun-icon {
+    display: block;
+    color: var(--warning);
     position: absolute;
-    top: 2px;
-    left: 2px;
-    bottom: 2px;
-    width: calc(25px - 4px);
-    background: var(--primary);
-    border-radius: 50%;
-    transition: all 0.3s ease;
 }
 
-.content nav #theme-toggle:checked+.theme-toggle::before {
-    left: calc(100% - (25px - 4px) - 2px);
+.theme-toggle .moon-icon {
+    display: none;
+    color: var(--primary);
+    position: absolute;
 }
+
+.content nav #theme-toggle:checked+.theme-toggle .sun-icon {
+    display: none;
+}
+
+.content nav #theme-toggle:checked+.theme-toggle .moon-icon {
+    display: block;
+}
+
+
 
 /* PHẦN MAIN--------------------------------------------------------------------------------------------------- */
 .content main {
