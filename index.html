@@ -1,31 +1,104 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Đăng Nhập | S-QNU</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="authContainer" class="auth-container">
+            
+            <form id="loginForm" class="auth-form active">
+                <div class="form-header">
+                    <div class="form-icon">
+                        <img src="sqnu-logo.png" alt="Logo S-QNU" class="logo-image">
+                    </div> 
+                    <!-- <div class="header-text">
+                        <div class="welcome-text">ĐĂNG NHẬP</div>
+                    </div> -->
+                </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>sQNU</title>
-</head>
+                <div class="form-body">
+                    <div id="loginError" class="error-message"></div>
+                    
+                    <div class="input-group">
+                        <input
+                            required=""
+                            placeholder="Email"
+                            name="email"
+                            id="loginEmail"
+                            type="email"
+                        />
+                    </div>
+                    <div class="input-group password-group"> 
+                         <input
+                            required=""
+                            placeholder="Mật khẩu"
+                            name="password"
+                            id="loginPassword"
+                            type="password"
+                        />
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Quên Mật Khẩu?</a>
+                    </div>
+                    <button class="submit" type="submit">Đăng Nhập</button>
+                    <div class="signup-link">
+                        Chưa có tài khoản? <a href="#" id="showRegister">Đăng Ký</a>
+                    </div>
+                </div>
+            </form>
 
-<body>
+            <form id="registerForm" class="auth-form">
+                <div class="form-header">
+                     <div class="form-icon">
+                        <img src="sqnu-logo.png" alt="Logo S-QNU" class="logo-image">
+                    </div> 
+                    <!-- <div class="header-text">
+                        <div class="welcome-text">ĐĂNG KÝ</div>
+                    </div> -->
+                </div>
 
-    <!-- Thanh truot Menu-->
-    <div class="sidebar">
-        <a href="#" class="logo">
-            <i class='bx bx-code-alt'></i>
-            <div class="logo-name"><span> S</span>QNU</div>
-        </a>
-        <ul class="side-menu">
-            <li><a href="#"><i class='bx bx-info-circle'></i>Giới Thiệu</a></li>
-            <li class="active"><a href="#"><i class='bx bx-book-open'></i>Tài Liệu</a></li>
-            <li><a href="#"><i class='bx bx-wallet'></i>Tích Lũy</a></li>
-            <li><a href="#"><i class='bx bx-store'></i>S-Store</a></li>
-            <li><a href="#"><i class='bx bx-message-dots'></i>Hỗ Trợ</a></li>
-        </ul>
-    </div>
+                <div class="form-body">
+                    <div id="registerError" class="error-message"></div>
 
-    <script src="index.js"></script>
-</body>
+                     <div class="input-group">
+                          <input
+                            required=""
+                            placeholder="Họ Tên"
+                            name="name"
+                            id="registerName"
+                            type="text"
+                        />
+                    </div>
+                    <div class="input-group">
+                         <input
+                            required=""
+                            placeholder="Email (vd: student@qnu.edu.vn)"
+                            name="email"
+                            id="registerEmail"
+                            type="email"
+                        />
+                    </div>
+                    <div class="input-group password-group">
+                         <input
+                            required=""
+                            placeholder="Mật khẩu (ít nhất 6 ký tự)"
+                            name="password"
+                            id="registerPassword"
+                            type="password"
+                        />
+                    </div>
+                    
+                    <button class="submit" type="submit">Tạo Tài Khoản</button>
+                    <div class="signup-link">
+                        Đã có tài khoản? <a href="#" id="showLogin">Đăng Nhập</a>
+                    </div>
+                </div>
+            </form>
 
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
