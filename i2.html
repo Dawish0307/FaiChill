@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="s2.css">
+    <title>SQNU of FaiChill</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="#" class="logo" data-page="trang-chu">
+            <img src="sqnu-logo.png" alt="SQNU Logo" class="logo-img">
+            <div class="logo-name" style="opacity: 0; position: absolute;"><span>S</span>QNU</div> 
+        </a>
+        <ul class="side-menu">      
+            <li class="active"><a href="#" data-page="trang-chu"><i class='bx bx-home-smile'></i>Trang Chủ</a></li>
+            <li><a href="#" data-page="tai-lieu"><i class='bx bx-book-open'></i>Tài Liệu</a></li>
+            <li><a href="#" data-page="tich-luy"><i class='bx bx-wallet'></i>Tích Lũy</a></li>
+            <li><a href="#" data-page="s-cua-hang"><i class='bx bx-store'></i>S-Cửa Hàng</a></li>
+            <li><a href="#" data-page="gioi-thieu"><i class='bx bx-info-circle'></i>Giới Thiệu</a></li>
+            <li><a href="#" data-page="ho-tro"><i class='bx bx-message-dots'></i>Hỗ Trợ</a></li>
+
+        </ul>
+
+    </div>
+    <div class="content">
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Tìm tài liệu..">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+
+            <div class="points">
+                <i class='bx bxs-star'></i>
+                <span>1250 Điểm</span>
+            </div>
+            
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle">
+                <i class='bx bxs-sun sun-icon'></i>
+                <i class='bx bxs-moon moon-icon'></i>
+            </label>
+
+            <a href="#" class="notif" data-page="notifications">
+                <i class='bx bx-bell'></i>
+                <span class="count">12</span>
+            </a>
+            
+            <a href="#" class="profile" data-page="user">
+                <i class='bx bx-user-circle'></i>
+            </a>
+
+            <a href="#" class="settings" data-page="settings">
+                <i class='bx bx-cog'></i>
+            </a>
+        </nav>
+
+        <main>
+
+            <div class="page active" id="trang-chu">
+                <div class="header-banner">
+                    <div class="banner-text">
+                        <h1>Trao Đổi Kiến Thức - Tích Lũy Giá Trị</h1>
+                        <p>Chia sẻ tài liệu học tập, mua bán sách/khóa học và tích điểm đổi thưởng hấp dẫn!</p>
+                        <a href="#" class="btn-primary">Khám Phá Tài Liệu</a>
+                        <a href="#" class="btn-secondary">S-Cửa Hàng</a>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://media.tapchigiaoduc.edu.vn/uploads/2024/11/20/11-1732109312.jpg"
+                            alt="Banner S-QNU">
+                    </div>
+                </div>
+
+                <div class="section-title">
+                    <h2>Tài Liệu Nổi Bật</h2>
+                    <a href="#">Xem tất cả</a>
+                </div>
+                <div class="data-items">
+                    <div class="item">
+                        <i class='bx bxs-file-pdf icon-large danger'></i>
+                        <h3>Toán Cao Cấp A1</h3>
+                        <p>Tài liệu ôn thi cuối kỳ.</p>
+                        <span class="price">0 Điểm</span>
+                    </div>
+                    <div class="item">
+                        <i class='bx bxs-book-content icon-large primary'></i>
+                        <h3>Giáo Trình C++ Cơ Bản</h3>
+                        <p>Dành cho sinh viên năm nhất.</p>
+                        <span class="price">25,000 VNĐ</span>
+                    </div>
+                    <div class="item">
+                        <i class='bx bxs-file-doc icon-large success'></i>
+                        <h3>Đề cương Tiếng Anh B1</h3>
+                        <p>Full bộ đề có đáp án chi tiết.</p>
+                        <span class="price">Miễn Phí</span>
+                    </div>
+                    <div class="item">
+                        <i class='bx bxs-archive icon-large warning'></i>
+                        <h3>Tài liệu Lập Trình Web</h3>
+                        <p>HTML, CSS, JS từ A-Z.</p>
+                        <span class="price">200 Điểm</span>
+                    </div>
+                </div>
+
+                <div class="section-title">
+                    <h2>Sản Phẩm Cửa Hàng Bán Chạy</h2>
+                    <a href="#">Xem thêm</a>
+                </div>
+                <div class="data-items store-items">
+                    <div class="store-item">
+                        <img src="https://via.placeholder.com/200x200?text=S-Item+1" alt="Sản phẩm 1">
+                        <h4>Sổ Tay Lập Kế Hoạch</h4>
+                        <span class="store-price">50,000 VNĐ</span>
+                    </div>
+                    <div class="store-item">
+                        <img src="https://via.placeholder.com/200x200?text=S-Item+2" alt="Sản phẩm 2">
+                        <h4>Khóa Học UI/UX Online</h4>
+                        <span class="store-price">1,200,000 VNĐ</span>
+                    </div>
+                    <div class="store-item">
+                        <img src="https://via.placeholder.com/200x200?text=S-Item+3" alt="Sản phẩm 3">
+                        <div class="store-detail">
+                            <h4>Tai Nghe Chống Ồn</h4>
+                            <span class="store-price">Đổi 5000 Điểm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title point-info-title">
+                    <h2>Tích Điểm Đổi Thưởng</h2>
+                    <a href="#">Chi tiết</a>
+                </div>
+                <div class="point-info">
+                    <div class="info-card primary-bg">
+                        <i class='bx bxs-gift'></i>
+                        <h3>Đăng Ký Nhận Điểm</h3>
+                        <p>Nhận ngay **100 Điểm** khi đăng ký tài khoản mới.</p>
+                    </div>
+                    <div class="info-card danger-bg">
+                        <i class='bx bxs-dollar-circle'></i>
+                        <h3>Mua Hàng Tích Lũy</h3>
+                        <p>**10,000 VNĐ** = **1 Điểm**. Mua càng nhiều, điểm càng cao!</p>
+                    </div>
+                    <div class="info-card success-bg">
+                        <i class='bx bxs-cloud-upload'></i>
+                        <h3>Chia Sẻ Tài Liệu</h3>
+                        <p>Tài liệu chất lượng được duyệt sẽ nhận ngay **50 Điểm**.</p>
+                    </div>
+                </div>
+
+                <div class="long-content-placeholder">
+                    <div class="section-title" style="margin-top: 40px; border-left-color: #00bcd4;">
+                        <h2>Các Chủ Đề Phổ Biến</h2>
+                    </div>
+                    <div class="data-items">
+                        <div class="item"><i class='bx bxs-flask icon-large danger'></i>
+                            <h3>Hóa Học Đại Cương</h3>
+                            <p>Xem 120 tài liệu</p><span class="price" style="color: var(--danger);">Hot</span>
+                        </div>
+                        <div class="item"><i class='bx bxs-brain icon-large primary'></i>
+                            <h3>Kinh Tế Vi Mô</h3>
+                            <p>Xem 85 tài liệu</p><span class="price" style="color: var(--primary);">New</span>
+                        </div>
+                        <div class="item"><i class='bx bxs-droplet-half icon-large success'></i>
+                            <h3>Thủy Lực</h3>
+                            <p>Xem 150 tài liệu</p><span class="price" style="color: var(--succes);">Miễn Phí</span>
+                        </div>
+                        <div class="item"><i class='bx bxs-cog icon-large warning'></i>
+                            <h3>Kỹ Thuật Phần Mềm</h3>
+                            <p>Xem 98 tài liệu</p><span class="price" style="color: var(--warning);">20 Điểm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page" id="tai-lieu">
+                <div class="header">
+                    <div class="left">
+                        <h1>Tài Liệu Học Tập</h1>
+                        <ul class="breadcrumb">
+                            <li><a href="#">
+                                    Tài liệu
+                                </a></li>
+                            /
+                            <li><a href="#" class="active">Menu</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="insights">
+                    <li>
+                        <i class='bx bxs-circle'></i>
+                        <span class="dai-cuong">
+                            <h3>
+                                Đại Cương
+                            </h3>
+                        </span>
+                    </li>
+                    <li><i class='bx bxs-circle-three-quarter'></i>
+                        <span class="dai-cuong">
+                            <h3>
+                                Cơ Sở Ngành
+                            </h3>
+                        </span>
+                    </li>
+                    <li><i class='bx bxs-circle-half'></i>
+                        <span class="dai-cuong">
+                            <h3>
+                                Chuyên Ngành
+                            </h3>
+                        </span>
+                    </li>
+                    <li><i class='bx bxs-circle-quarter'></i>
+                        <span class="dai-cuong">
+                            <h3>
+                                Đề Thi
+                            </h3>
+                        </span>
+                    </li>
+                </ul>
+                <div class="bottom-data">
+                    <div class="post">
+                        <div class="header">
+                            <i class='bx bx-time'></i>
+                            <h3>Đã đăng gần đây</h3>
+                            <i class='bx bx-filter'></i>
+                            <i class='bx bx-search'></i>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i class='bx bx-user-circle'></i>
+                                        <h4>user name</h4>
+                                    </td>
+                                    <td>14-08-2023</td>
+                                    <td><span class="status ktlt">Kỹ thuật lập trình</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class='bx bx-user-circle'></i>
+                                        <h4>user name</h4>
+                                    </td>
+                                    <td>14-08-2023</td>
+                                    <td><span class="status xstk">Xác suất thống kê</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class='bx bx-user-circle'></i>
+                                        <h4>user name</h4>
+                                    </td>
+                                    <td>14-08-2023</td>
+                                    <td><span class="status th">Triết hoc</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="dongGop">
+                        <div class="header">
+                            <i class='bx bx-folder-plus'></i>
+                            <h3>Đóng góp</h3>
+                        </div>
+                        <ul class="choose">
+                            <div class="bottom">
+                                <button>Thêm tài liệu<i class='bx bx-plus'></i></button>
+                            </div>
+                            <div class="bottom">
+                                <button>Thêm đáp án<i class='bx bx-plus'></i></button>
+                            </div>
+
+                        </ul>
+                    </div>
+
+                    </div>
+            </div>
+            <div class="page" id="tich-luy">
+                <div class="header">
+                    <h1>Mục Tích Lũy</h1>
+                </div>
+                <div class="content-placeholder">
+                    <p>Nội dung chi tiết về điểm thưởng, lịch sử giao dịch và đổi quà sẽ hiển thị ở đây.</p>
+                    <div class="info-card primary-bg" style="margin-top: 20px;">
+                        <h3>Điểm Hiện Tại: 1250 Points</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page" id="user">
+                <div class="header">
+                    <h1>Hồ Sơ Người Dùng</h1>
+                </div>
+                <div class="user-profile-card">
+                    <i class='bx bxs-user-detail profile-icon'></i>
+                    <h2>Nguyễn Văn A</h2>
+                    <p>Email: anva@student.qnu.edu.vn</p>
+                    <p>Mã số sinh viên: 12345678</p>
+                    <div class="stats">
+                        <span><i class='bx bx-book-open'></i> Tài liệu đã đăng: 5</span>
+                        <span><i class='bx bxs-download'></i> Tài liệu đã tải: 15</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page" id="notifications">
+                <div class="header">
+                    <h1>Thông Báo Của Bạn</h1>
+                </div>
+                <ul class="notification-list">
+                    <li class="new-notif"><i class='bx bxs-star'></i> Bạn nhận được 50 điểm từ việc chia sẻ tài liệu "Giải tích 1". <span class="time">5 phút trước</span></li>
+                    <li><i class='bx bxs-bell'></i> Tài liệu "Lập trình Web" đã được duyệt và đăng tải. <span class="time">2 giờ trước</span></li>
+                    <li><i class='bx bxs-shopping-bag'></i> Đơn hàng **Tai Nghe Chống Ồn** đã được giao. <span class="time">1 ngày trước</span></li>
+                    <li><i class='bx bxs-user-plus'></i> Người dùng **UserB** đã theo dõi bạn. <span class="time">3 ngày trước</span></li>
+                </ul>
+            </div>
+
+            <div class="page" id="settings">
+                <div class="header">
+                    <h1>Cài Đặt Hệ Thống</h1>
+                </div>
+                <div class="settings-list-container">
+                    
+                    <a href="#" class="settings-link-item" data-page="general-settings">
+                        <i class='bx bx-slider-alt'></i>
+                        <div class="text-content">
+                            <h3>Cài Đặt Chung</h3>
+                            <p>Ngôn ngữ, chủ đề, hiển thị.</p>
+                        </div>
+                        <i class='bx bx-chevron-right'></i>
+                    </a>
+
+                    <a href="#" class="settings-link-item" data-page="security-settings">
+                        <i class='bx bx-lock-alt'></i>
+                        <div class="text-content">
+                            <h3>Bảo Mật & Tài Khoản</h3>
+                            <p>Đổi mật khẩu, quản lý phiên đăng nhập.</p>
+                        </div>
+                        <i class='bx bx-chevron-right'></i>
+                    </a>
+
+                    <a href="#" class="settings-link-item" data-page="notification-prefs">
+                        <i class='bx bx-bell'></i>
+                        <div class="text-content">
+                            <h3>Tùy Chọn Thông Báo</h3>
+                            <p>Quản lý các loại thông báo nhận được.</p>
+                        </div>
+                        <i class='bx bx-chevron-right'></i>
+                    </a>
+
+                    <a href="#" class="settings-link-item" data-page="help-center">
+                        <i class='bx bx-help-circle'></i>
+                        <div class="text-content">
+                            <h3>Trung Tâm Hỗ Trợ</h3>
+                            <p>FAQ và liên hệ hỗ trợ.</p>
+                        </div>
+                        <i class='bx bx-chevron-right'></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="page settings-subpage" id="general-settings">
+                <div class="header">
+                    <a href="#" class="back-link" data-page="settings"><i class='bx bx-arrow-back'></i></a>
+                    <h1>Cài Đặt Chung</h1>
+                </div>
+                <div class="settings-group">
+                    <div class="setting-item">
+                        <span>Ngôn ngữ hiển thị</span>
+                        <select>
+                            <option>Tiếng Việt</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <span>Chủ đề (Dark/Light)</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle-sub" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page settings-subpage" id="security-settings">
+                <div class="header">
+                    <a href="#" class="back-link" data-page="settings"><i class='bx bx-arrow-back'></i></a>
+                    <h1>Bảo Mật & Tài Khoản</h1>
+                </div>
+                <div class="settings-group">
+                    <button class="setting-btn danger-btn" data-page="change-password">Đổi Mật Khẩu</button>
+                    <button class="setting-btn">Quản Lý Thiết Bị Đã Đăng Nhập</button>
+                    <div class="setting-item">
+                        <span>Kích hoạt Xác thực 2 yếu tố (2FA)</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="page settings-subpage" id="change-password">
+                <div class="header">
+                    <a href="#" class="back-link" data-page="security-settings"><i class='bx bx-arrow-back'></i></a>
+                    <h1>Đổi Mật Khẩu</h1>
+                </div>
+                <div class="change-password-form">
+                    <input type="password" placeholder="Mật khẩu hiện tại" required>
+                    <input type="password" placeholder="Mật khẩu mới" required>
+                    <input type="password" placeholder="Xác nhận mật khẩu mới" required>
+                    <button class="setting-btn primary-btn">Cập Nhật Mật Khẩu</button>
+                </div>
+            </div>
+
+            <div class="page settings-subpage" id="notification-prefs">
+                <div class="header">
+                    <a href="#" class="back-link" data-page="settings"><i class='bx bx-arrow-back'></i></a>
+                    <h1>Tùy Chọn Thông Báo</h1>
+                </div>
+                <div class="settings-group">
+                    <div class="setting-item">
+                        <span>Thông báo về tài liệu mới</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <span>Thông báo từ S-Cửa hàng</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+             <div class="page settings-subpage" id="help-center">
+                <div class="header">
+                    <a href="#" class="back-link" data-page="settings"><i class='bx bx-arrow-back'></i></a>
+                    <h1>Trung Tâm Hỗ Trợ</h1>
+                </div>
+                <div class="settings-group">
+                    <p>Hãy tìm kiếm câu trả lời cho các câu hỏi thường gặp của bạn hoặc liên hệ với đội ngũ hỗ trợ của chúng tôi.</p>
+                    <button class="setting-btn primary-btn">Câu Hỏi Thường Gặp (FAQ)</button>
+                    <button class="setting-btn">Gửi Yêu Cầu Hỗ Trợ</button>
+                </div>
+            </div>
+
+
+        </main>
+
+    </div>
+
+    <script src="s2.js"></script>
+</body>
+
+</html>
