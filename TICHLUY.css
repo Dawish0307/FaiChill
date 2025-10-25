@@ -1,0 +1,302 @@
+/* -------------------------PHẦN TÍCH LŨY ----------------------- */
+
+.content main .page#tich-luy {
+    padding: 36px 24px;
+}
+
+.content main .page .pagee-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.content main .page .pagee-header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-top: -40px;
+    margin-left: -20px;
+}
+
+.diemVaQuyDinh {
+
+
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*khoang cach hai cot*/
+    gap: 30px;
+    /* cho pheps responsive*/
+    flex-wrap: wrap;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /*dieu chinh tu dong */
+    min-height: auto;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    min-width: 350px;
+    padding: 0;
+    border-radius: 10px;
+    background-color: var(--light);
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+
+}
+
+
+/* thẻ user header */
+.card.highlight {
+    background: var(--light);
+    border: 1px solid var(--grey);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: none;
+
+    /* border-left trungf vowwis mauf chinhs */
+    border-left: 5px solid var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-header .bx-user-circle {
+    margin-top: -50px;
+    font-size: 4rem;
+    color: var(--primary);
+}
+
+/* bang diem va nut */
+.left-column {
+    flex-grow: 1;
+    flex-basis: 300px;
+    height: 500px;
+    width: 100%;
+}
+
+.left-column .actions {
+    width: 50%;
+}
+
+.left-column .card.highlight .userbox {
+    display: block;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.left-column .card.highlight .userbox .bx-medal {
+    color: #545151;
+    font-size: 1rem;
+}
+
+.left-column .card.highlight .userbox .rank.silver {
+    background-color: #c9d7e5;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.left-column .card.highlight .userbox .desc {
+    margin-left: -60px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--dark);
+}
+
+.left-column .card.highlight .userbox h3 {
+    font-size: 45px;
+    color: var(--dark);
+}
+
+.left-column .user-point {
+    margin-left: 25px;
+}
+
+.left-column .user-point h1 {
+    font-size: 80px;
+    color: #1357bb;
+}
+
+.left-column .user-point .unit {
+    font-size: 25px;
+    color: #266ad1;
+}
+
+.left-column .user-point p {
+    font-size: 20px;
+    color: var(--dark);
+}
+
+.left-column .actions {
+    margin-left: 25px;
+    display: block;
+    width: 92%;
+    justify-content: center;
+}
+
+.left-column .actions .NR {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.left-column .actions .NR button {
+    width: 620px;
+    border: none;
+    background: #1976D2;
+    color: #fff;
+    margin: 10px;
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 30px;
+}
+
+.left-column .actions .NR button:hover {
+    background: #0d47a1;
+}
+
+.left-column .actions .NR button .bx {
+    vertical-align: middle;
+}
+
+.left-column .actions .xemLs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.left-column .actions .xemLs button {
+    width: 620px;
+    border: none;
+    background: var(--grey);
+    color: var(--dark);
+    margin: 10px;
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.left-column .actions .xemLs button:hover {
+    background: var(--dark-grey);
+}
+
+.left-column .actions .xemLs button .bx {
+    vertical-align: middle;
+}
+
+/* bang quy dinh */
+
+.right-column {
+    flex-grow: 1;
+    flex-basis: 300px;
+    height: 500px;
+    width: 100%;
+    overflow: auto;
+    overscroll-behavior: auto;
+}
+
+.right-column .card {
+    flex-grow: 1;
+    flex-basis: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.right-column .card .header-right {
+    display: flex;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 40px;
+    color: var(--dark);
+    gap: 10px;
+}
+
+.right-column .card .header-right i {
+    font-size: 40px;
+    margin-top: 20px;
+    color: var(--primary);
+}
+
+.right-column .card .header-right h3 {
+    margin-top: 15px;
+}
+
+.right-column .card .diemThuong {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column .card .diemThuong .cong,
+.right-column .card .diemThuong .tru {
+    border-radius: 25px;
+    background-color: var(--grey);
+    width: calc(100% - 90px);
+    margin-left: 40px;
+    display: flex;
+}
+
+.right-column .card .diemThuong .cong .cong10,
+.right-column .card .diemThuong .cong .cong5,
+.right-column .card .diemThuong .cong .cong50,
+.right-column .card .diemThuong .cong .cong3,
+.right-column .card .diemThuong .tru .tru100 {
+    padding-left: 20px;
+    color: var(--dark);
+
+}
+
+.right-column .card .diemThuong .cong .cong10 h4,
+.right-column .card .diemThuong .cong .cong5 h4,
+.right-column .card .diemThuong .cong .cong50 h4,
+.right-column .card .diemThuong .cong .cong3 h4,
+.right-column .card .diemThuong .tru .tru100 h4 {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.right-column .card .diemThuong .cong i,
+.right-column .card .diemThuong .tru i {
+    color: #FBC02D;
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.right-column .card .diemThuong .tru i {
+    color: var(--danger);
+}
+
+/* hiệu ứng load trang */
+.left-column,
+.right-column {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
