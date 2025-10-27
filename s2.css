@@ -58,13 +58,13 @@ body.dark .sidebar .side-menu .active {
     background: var(--dark-bg);
 }
 
-body.dark .sidebar .side-menu li.active::before,
-body.dark .sidebar .side-menu .active::after {
-    box-shadow: 20px 20px 0 var(--dark-bg), 20px -20px 0 var(--dark-bg);
-}
+
 
 body.dark .sidebar .side-menu li a {
     color: var(--dark); 
+}
+body.dark .sidebar .side-menu li.active a {
+    color: var(--primary);
 }
 
 body.dark .content nav::before {
@@ -142,7 +142,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--light);
+    background-color: var(--light);
+    background-repeat: no-repeat;
     width: 230px;
     height: 100%;
     z-index: 2000;
@@ -197,7 +198,7 @@ body {
     padding: 0 5px; /* Giảm padding */
     transform: none; 
     margin-left: 0;
-    margin-top: -20px; /* Dịch lên một chút để căn chỉnh */
+    margin-top: -21px; /* Dịch lên một chút để căn chỉnh */
     opacity: 1; /* Đảm bảo logo vẫn hiển thị */
 }
 
@@ -276,7 +277,7 @@ body {
 }
 
 .sidebar .side-menu li.active a {
-    color: var(--success);
+    color: var(--primary);
 }
 
 .sidebar.close .side-menu li a {
@@ -423,8 +424,8 @@ NÚT DARK MODE CẢI TIẾN */
 }
 
 .content nav .theme-toggle .sun-icon {
-    color: #fff;
-    left: 8px;
+    color: #faea05;
+    left: 6px;
     opacity: 1;
 }
 
@@ -516,6 +517,7 @@ NÚT DARK MODE CẢI TIẾN */
 /* hiện page có active */
 .content main .page.active {
     display: block;
+    padding: 36px 24px;
 }
 
 .content main .page .header {
@@ -532,12 +534,14 @@ NÚT DARK MODE CẢI TIẾN */
     font-weight: 600;
     margin-bottom: 10px;
     color: var(--dark);
+
 }
 
 .content main .page .header .left .breadcrumb {
     display: flex;
     align-items: center;
     grid-gap: 16px;
+
 }
 
 .content main .header .left .breadcrumb li {
@@ -1366,7 +1370,328 @@ input:focus + .slider {
 input:checked + .slider:before {
     transform: translateX(20px);
 }
+/* -------------------------PHẦN TÍCH LŨY ----------------------- */
+.content main {
+    padding: 0;
+}
+.content main .page#tich-luy {
+    padding: 0;
+}
 
+.content main .page .pagee-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.content main .page .pagee-header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-top: -40px;
+    margin-left: -20px;
+}
+
+.diemVaQuyDinh {
+
+
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*khoang cach hai cot*/
+    gap: 30px;
+    /* cho pheps responsive*/
+    flex-wrap: wrap;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /*dieu chinh tu dong */
+    min-height: auto;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    min-width: 350px;
+    min-height: 550px;
+    padding: 0;
+    border-radius: 10px;
+    background-color: var(--light);
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+
+}
+
+
+/* thẻ user header */
+.card.highlight {
+    background: var(--light);
+    border: 1px solid var(--grey);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: none;
+
+    /* border-left trungf vowwis mauf chinhs */
+    border-left: 5px solid var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-header .bx-user-circle {
+    margin-top: -50px;
+    font-size: 4rem;
+    color: var(--primary);
+}
+body.dark .user-header .bx-user-circle {
+    color: var(--light-primary);
+}
+
+/* bang diem va nut */
+.left-column {
+    flex-grow: 1;
+    flex-basis: 300px;
+    height: 500px;
+    width: 100%;
+    background-image: url('i.png');
+}
+
+.left-column .actions {
+    width: 50%;
+}
+
+.left-column .card.highlight .userbox {
+    display: block;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.left-column .card.highlight .userbox .bx-medal {
+    color: #545151;
+    font-size: 1rem;
+}
+
+.left-column .card.highlight .userbox .rank.silver {
+    background-color: #c9d7e5;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.left-column .card.highlight .userbox .desc {
+    margin-left: -60px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--dark);
+}
+
+.left-column .card.highlight .userbox h3 {
+    font-size: 30px;
+    color: var(--dark);
+    margin-top: -20px;
+}
+
+.left-column .user-point {
+    margin-left: 25px;
+}
+
+.left-column .user-point h1 {
+    font-size: 100px;
+    color: #1357bb;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.left-column .user-point .unit {
+    font-size: 35px;
+    margin-left: -25px;
+    color: #266ad1;
+}
+
+.left-column .user-point p {
+    font-size: 20px;
+    color: var(--dark);
+}
+body.dark  .left-column .user-point p {
+    color: var(--grey);
+}
+
+.left-column .actions {
+    margin-left: 25px;
+    display: block;
+    width: 92%;
+    justify-content: center;
+}
+
+.left-column .actions .NR {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.left-column .actions .NR button {
+    width: 620px;
+    border: none;
+    background: #1976D2;
+    color: #fff;
+    margin: 10px;
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 30px;
+}
+
+.left-column .actions .NR button:hover {
+    background: #0d47a1;
+}
+
+.left-column .actions .NR button .bx {
+    vertical-align: middle;
+}
+
+.left-column .actions .xemLs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.left-column .actions .xemLs button {
+    width: 620px;
+    border: none;
+    background: var(--grey);
+    color: var(--dark);
+    margin: 10px;
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.left-column .actions .xemLs button:hover {
+    background: var(--dark-grey);
+}
+
+.left-column .actions .xemLs button .bx {
+    vertical-align: middle;
+}
+
+/* bang quy dinh */
+
+.right-column {
+    flex-grow: 1;
+    flex-basis: 300px;
+    height: 500px;
+    width: 100%;
+    overflow: auto;
+    overscroll-behavior: auto;
+    background-image: url('i.png');
+}
+
+.right-column .card {
+    flex-grow: 1;
+    flex-basis: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column .card .header-right {
+    display: flex;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 40px;
+    color: var(--dark);
+    gap: 10px;
+}
+
+.right-column .card .header-right i {
+    font-size: 45px;
+    margin-top: -2px;
+    color: var(--primary);
+}
+
+.right-column .card .header-right h3 {
+    margin-top: 8px;
+    font-size: 30px;
+}
+
+.right-column .card .diemThuong {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column .card .diemThuong .cong,
+.right-column .card .diemThuong .tru {
+    border-radius: 25px;
+    background-color: var(--grey);
+    width: calc(100% - 80px);
+    height: 70px;
+    margin-left: 40px;
+    display: flex;
+}
+
+.right-column .card .diemThuong .cong .cong10,
+.right-column .card .diemThuong .cong .cong5,
+.right-column .card .diemThuong .cong .cong50,
+.right-column .card .diemThuong .cong .cong3,
+.right-column .card .diemThuong .tru .tru100 {
+    padding-left: 10px;
+    color: var(--dark);
+
+}
+
+.right-column .card .diemThuong .cong .cong10 h4,
+.right-column .card .diemThuong .cong .cong5 h4,
+.right-column .card .diemThuong .cong .cong50 h4,
+.right-column .card .diemThuong .cong .cong3 h4,
+.right-column .card .diemThuong .tru .tru100 h4 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.right-column .card .diemThuong .cong i,
+.right-column .card .diemThuong .tru i {
+    color: #FBC02D;
+    font-size: 2.5rem;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.right-column .card .diemThuong .tru i {
+    color: var(--danger);
+}
+
+/* hiệu ứng load trang */
+.left-column,
+.right-column {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* Rounded sliders */
 .slider.round {
     border-radius: 25px;
@@ -1402,3 +1727,306 @@ input:checked + .slider:before {
     align-self: flex-start;
 }
 
+
+
+/* -------------------------------------------------------------------------------------
+CSS MỚI CHO TRANG CHỦ ĐỘC ĐÁO (main-carousel, page-content-grid) */
+
+/* Carousel Container */
+.main-carousel {
+    position: relative;
+    height: 550px; /* Chiều cao cố định cho carousel */
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 60px;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--light);
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+}
+body.dark .carousel-caption {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--light);
+}
+
+.carousel-caption h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--light);
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Nút điều hướng */
+/* .carousel-control {
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background 0.3s;
+} */
+/* Dấu chấm điều hướng */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px; /* Đặt ở phía dưới */
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Màu trắng mờ */
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background-color: var(--light); /* Màu trắng đục khi active */
+    transform: scale(1.2); /* Phóng to một chút */
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control.prev {
+    left: 20px;
+}
+
+.carousel-control.next {
+    right: 20px;
+}
+
+/* Ẩn banner cũ (Nếu có) */
+.content main .page#trang-chu .header-banner {
+    display: none;
+}
+
+/* Bố cục lưới cho phần còn lại của trang */
+/* V2: Sử dụng Flex cho các thành phần con cuộn ngang */
+.page-content-grid-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section-container {
+    padding: 20px 0;
+    background: var(--light); /* Nền cho cả khu vực */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.dark .section-container {
+    background: var(--dark-card);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Container Cuộn Ngang */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 20px;
+    padding-bottom: 25px; /* Thêm padding cho thanh cuộn */
+    
+    /* Ẩn thanh cuộn mặc định (Webkit) */
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.horizontal-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-track {
+    background: var(--grey);
+}
+body.dark .horizontal-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--light-primary);
+}
+body.dark .horizontal-scroll-container::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+/* Card Ngang (h-card) */
+.h-card {
+    flex: 0 0 250px; /* Chiều rộng cố định cho mỗi card */
+    background: var(--light);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.h-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.dark .h-card {
+    background: var(--dark-bg); /* Nền card trong dark mode */
+}
+
+.h-card-image {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+/* Thẻ Tài Liệu */
+.doc-card .h-card-image {
+    border-bottom: 3px solid var(--primary);
+}
+.doc-card:nth-child(2) .h-card-image {
+    border-bottom-color: var(--danger);
+}
+.doc-card:nth-child(3) .h-card-image {
+    border-bottom-color: var(--success);
+}
+.doc-card:nth-child(4) .h-card-image {
+    border-bottom-color: var(--warning);
+}
+
+
+.h-card-content {
+    padding: 15px;
+}
+
+.h-card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--dark);
+    white-space: normal;
+}
+
+.h-card-content p {
+    font-size: 0.85rem;
+    color: var(--dark-grey);
+    margin-bottom: 10px;
+}
+
+.h-price {
+    font-weight: 600;
+    font-size: 1rem;
+}
+.h-price.primary { color: var(--primary); }
+.h-price.danger { color: var(--danger); }
+.h-price.success { color: var(--success); }
+.h-price.warning { color: var(--warning); }
+
+
+/* Thẻ Tích Điểm (Màu nền nổi bật hơn) */
+.point-cards .h-card {
+    flex: 0 0 280px;
+    color: var(--light);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+}
+
+.point-cards .h-card i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease;
+}
+.point-cards .h-card:hover i {
+    transform: scale(1.1);
+}
+
+.point-cards .h-card h3 {
+    color: var(--light);
+    font-size: 1.3rem;
+}
+.point-cards .h-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.warning-bg {
+    background: var(--warning);
+}
+body.dark .warning-bg {
+    background: #ffc838; /* Tăng độ sáng để nổi bật */
+}
+
+
+/* Document Viewer Page */
+#doc-viewer .doc-content-placeholder {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--light);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark #doc-viewer .doc-content-placeholder {
+    background: var(--dark-card);
+}
+
+/* Đảm bảo responsive cho mobile */
+@media screen and (max-width: 600px) {
+    .h-card {
+        flex: 0 0 200px;
+    }
+    .point-cards .h-card {
+        flex: 0 0 250px;
+    }
+    .section-container {
+        padding: 15px 0;
+    }
+    .horizontal-scroll-container {
+        padding: 10px 15px;
+        padding-bottom: 20px;
+    }
+}

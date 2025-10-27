@@ -49,6 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tichLuyPage) {
             tichLuyPage.querySelector('.info-card h3').textContent = `Điểm Hiện Tại: ${currentUser.points} Points`;
         }
+        
+        // Cập nhật điểm trên trang chủ mới
+        const pointsDisplay = document.querySelector('.point-cards .points-display');
+        if (pointsDisplay) {
+            pointsDisplay.textContent = `${currentUser.points} Points`;
+        }
     }
 });
 
@@ -167,3 +173,152 @@ if (subToggler) {
         mainToggle.dispatchEvent(new Event('change'));
     });
 }
+
+// --- LOGIC CAROUSEL MỚI (DOTS & SWIPE) ---
+let currentSlide = 0;
+const carousel = document.querySelector('.main-carousel');
+const slides = document.querySelectorAll('.main-carousel .carousel-item');
+const dotsContainer = document.querySelector('.carousel-dots');
+const totalSlides = slides.length;
+
+// Khởi tạo Dots
+const createDots = () => {
+    dotsContainer.innerHTML = ''; // Xóa dots cũ (nếu có)
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.setAttribute('data-slide-index', i);
+        dot.addEventListener('click', () => {
+            currentSlide = i;
+            updateCarousel();
+            resetAutoSlide();
+        });
+        dotsContainer.appendChild(dot);
+    }
+};
+
+const updateCarousel = () => {
+    // 1. Cập nhật Slide
+    slides.forEach((slide, index) => {
+        slide.classList.remove('active');
+        if (index === currentSlide) {
+            slide.classList.add('active');
+        }
+    });
+
+    // 2. Cập nhật Dots
+    document.querySelectorAll('.carousel-dots .dot').forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === currentSlide) {
+            dot.classList.add('active');
+        }
+    });
+};
+
+const moveCarousel = (step) => {
+    currentSlide += step;
+
+    // Xử lý vòng lặp
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+    
+    updateCarousel();
+};
+
+// Tự động chuyển slide mỗi 5 giây
+let autoSlideInterval = setInterval(() => moveCarousel(1), 5000);
+
+const resetAutoSlide = () => {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(() => moveCarousel(1), 5000);
+}
+
+
+// --- LOGIC KÉO CHUỘT (SWIPE) ---
+let isDragging = false;
+let startX;
+let draggedAmount = 0;
+const dragThreshold = 50; // Khoảng cách kéo tối thiểu để chuyển slide (pixels)
+
+carousel.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX;
+    draggedAmount = 0;
+    carousel.style.cursor = 'grabbing';
+});
+
+carousel.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    draggedAmount = e.pageX - startX;
+    // (Nếu muốn thêm hiệu ứng kéo, bạn có thể dịch chuyển slide ở đây)
+});
+
+carousel.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    // THAY ĐỔI: Trở về con trỏ mặc định/pointer khi thả chuột
+    carousel.style.cursor = 'pointer'; 
+
+    if (draggedAmount > dragThreshold) {
+        // Kéo sang phải (Chuyển sang slide trước)
+        moveCarousel(-1);
+        resetAutoSlide();
+    } else if (draggedAmount < -dragThreshold) {
+        // Kéo sang trái (Chuyển sang slide tiếp theo)
+        moveCarousel(1);
+        resetAutoSlide();
+    }
+    draggedAmount = 0;
+});
+
+// Ngăn chặn việc kéo chuột rời khỏi carousel khi vẫn đang kéo
+carousel.addEventListener('mouseleave', () => {
+    if (isDragging) {
+        isDragging = false;
+        // THAY ĐỔI: Trở về con trỏ mặc định/pointer khi rời khỏi
+        carousel.style.cursor = 'pointer'; 
+        draggedAmount = 0;
+    }
+});
+
+
+// Khởi tạo carousel: tạo dots và hiển thị slide đầu tiên
+if (totalSlides > 0) {
+    createDots();
+    updateCarousel();
+}
+
+// Gắn hàm moveCarousel vào window (giữ lại cho tương thích nếu cần)
+window.moveCarousel = moveCarousel;
+
+// --- LOGIC XEM FILE TÀI LIỆU (MỚI) ---
+const docCards = document.querySelectorAll('.doc-card');
+const docViewerPage = document.getElementById('doc-viewer');
+const docViewerIframe = document.getElementById('pdf-viewer');
+const docTitleElement = document.getElementById('doc-title');
+const docBreadcrumbName = document.getElementById('doc-breadcrumb-name');
+
+docCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const docFile = card.getAttribute('data-doc-file');
+        const docName = card.getAttribute('data-doc-name');
+
+        if (docFile) {
+            // Thiết lập nội dung cho trang doc-viewer
+            docTitleElement.textContent = docName;
+            docBreadcrumbName.textContent = docName;
+            docViewerIframe.src = docFile;
+
+            // Chuyển sang trang doc-viewer
+            pages.forEach(p => p.classList.remove('active'));
+            docViewerPage.classList.add('active');
+
+            // Đảm bảo không có mục sidebar nào được active
+            document.querySelectorAll('.side-menu li').forEach(l => l.classList.remove('active'));
+        }
+    });
+});
